@@ -15,14 +15,17 @@ I cannot bear it anymore so I wrote my own program to do the job. This, in fact,
 
 ## How to use `hupyter.py`
 
-Copy the `hupyter.py` file and paste it to the root folder of your Hugo project. Then, at the root directory of your hugo project
+Copy the `hupyter.py` file and paste it to the root folder of your Hugo project. Then, at the root directory of your hugo project, run
 
 ```bash
 python hupyter.py notebook_directory post_direction
 ```
 
-An example:
+For example, if you have a folder called `notebooks` at the root directory of your Hugo project:
 
 ```bash
 python hupyter.py notebooks/2022-08-24-hierarchical-clustering.ipynb en/blog
 ```
+
+Please refer to [my Hugo project structure](https://github.com/hongtaoh/hongtaoh.github.io) to contextualize the command: 
+

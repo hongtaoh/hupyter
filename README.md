@@ -1,5 +1,7 @@
 # Hupyter
 
+![](hupyter.png)
+
 I love writing tutorials in Jupyter Notebooks and I want to convert them to Hugo posts on [my blog](https://hongtaoh.com/). I tried [nb2hugo](https://github.com/vlunot/nb2hugo) by vlunot but it lacks two functions:
   1. It seems that if I've converted it before, then I have to delete the converted blog posts in `/content/` before I can convert again. 
   2. It does not update the image path automatically. I have to manually update the image path. 
@@ -27,5 +29,9 @@ For example, if you have a folder called `notebooks` at the root directory of yo
 python hupyter.py notebooks/2022-08-24-hierarchical-clustering.ipynb en/blog
 ```
 
-Please refer to [my Hugo project structure](https://github.com/hongtaoh/hongtaoh.github.io) to contextualize the command: 
+Please refer to [my Hugo project structure](https://github.com/hongtaoh/hongtaoh.github.io) to contextualize the command.
+
+## Note
+
+In the folder containing your notebook, for example, `notebooks`, if you have a subfolder containing images that you will use in `ipynb` files, you can name that subfolder anything but don't have the string of `files` in the name. This is because `nbconvert` will automatically generate a folder whose name contains the string of `files`. So if your image folder's name contains this string, bugs will occur. 
 

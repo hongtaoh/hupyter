@@ -15,6 +15,28 @@ I cannot bear it anymore so I wrote my own program to do the job. This, in fact,
   - Move the auto-generated files by [nbconvert](https://github.com/jupyter/nbconvert) to the `static` folder.
   - Update image links in the output markdown file. 
 
+## Works for IJulia as well
+
+`hupyter.py` works for IJulia. Use it the same way as you convert a `python` notebook. The only difference is that because Julia Plots were originally in `svg`, you need to save the figure in `png` or `jpg` and then embed the image in a markdown cell. For example:
+
+```julia
+using Plots
+
+times = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6] 
+pix = [0.5, 1, 1.5, 2.5, 3.5, 5]
+Plots.plot(times, pix
+)
+savefig("juliaplots/p1.png")
+```
+
+Adn then in a markdown cell:
+
+```
+![](juliaplots/p1.png)
+```
+
+After this is done, follow the instructions below as you are converting a normal `python` notebook. 
+
 ## How to use `hupyter.py`
 
 Copy the `hupyter.py` file and paste it to the root folder of your Hugo project. Then, at the root directory of your hugo project, run
